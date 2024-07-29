@@ -1,24 +1,11 @@
 package ec.edu.uce.GrupalLogica.model.entidades;
 
-import jakarta.persistence.*;
-
-@Entity
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @Column
     private String name;
-
-    @Column
     private String email;
-
-    @Column
     private String password;
-
-    @Column
     private String role;
 
     public User() {

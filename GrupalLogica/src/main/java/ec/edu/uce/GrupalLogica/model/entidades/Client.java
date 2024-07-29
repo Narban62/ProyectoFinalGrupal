@@ -1,13 +1,11 @@
 package ec.edu.uce.GrupalLogica.model.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 
-
-public class Admin {
+public class Client {
 
 
     private Long id;
@@ -15,7 +13,9 @@ public class Admin {
     private String email;
 
 
-    public Admin() {
+    private List<CustomOrder> pedidos;
+
+    public Client() {
     }
 
     public Long getId() {
@@ -40,5 +40,13 @@ public class Admin {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<CustomOrder> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<CustomOrder> pedidos) {
+        this.pedidos = pedidos;
     }
 }
