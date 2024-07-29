@@ -1,9 +1,10 @@
 # ProyectoFinalGrupal
 Autores: Paul Cueva, Belén Paca, Luis Perenguez
 
-# PAULIBEL - Sistema de Gestión de Tienda de Ropa, el nombre del sistema salió de la combinación de los nombres de los Autores del código.
+# PAULIBEL - Sistema de Gestión de Tienda de Ropa.
 
-PAULIBEL es una aplicación de gestión para una tienda de ropa de telas, diseñada para ofrecer una experiencia fluida tanto para clientes como para administradores. El sistema está estructurado en paquetes separados: `Model`, `Controller`, `Service`, `View`, y `Repository`, para asegurar una arquitectura limpia y organizada.
+PAULIBEL- El nombre del sistema salió de la combinación de los 3 nombres de los Autores del código.
+Es una aplicación de gestión para una tienda de ropa de telas, diseñada para ofrecer una experiencia fluida tanto para clientes como para administradores. El sistema está estructurado en paquetes separados: `Model`, `Controller`, `Service`, `View`, y `Repository`, para asegurar una arquitectura limpia y organizada.
 
 ## Funcionalidades
 
