@@ -1,5 +1,6 @@
 package ec.edu.uce.GrupalLogica.view;
 
+import ec.edu.uce.GrupalLogica.Services.ProductService;
 import ec.edu.uce.GrupalLogica.controller.Container;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +21,8 @@ public class JFrameLoginClient extends JFrame {
     private JPanel jPanel1;
     private JPasswordField textPassword;
     private JTextField txtUsuario;
+
+    private ProductService productService;
 
     private Container container;
 
@@ -160,8 +163,16 @@ public class JFrameLoginClient extends JFrame {
     private void btnInicSesionActionPerformed(ActionEvent evt) {
         String email = txtUsuario.getText();
         String password = new String(textPassword.getPassword());
-        String result = container.authenticateClient(email, password);
+        boolean result = container.authenticateClient(email, password);
         JOptionPane.showMessageDialog(this, result);
+        if (result) {
+            ClienteVista clienteVista = new ClienteVista(container,productService);
+            clienteVista.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, result);
+        }
+
     }
 
     private void btnRegistroActionPerformed(ActionEvent evt) {

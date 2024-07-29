@@ -155,8 +155,15 @@ public class JFrameLoginAdmin extends JFrame {
     private void btnInicSesionActionPerformed(ActionEvent evt) {
         String email = txtUsuario.getText();
         String password = new String(textPassword.getPassword());
-        String result = container.authenticateAdmin(email, password);
+        boolean result = container.authenticateAdmin(email, password);
         JOptionPane.showMessageDialog(this, result);
+        if (result) {
+            JFrameAdmin adminFrame = new JFrameAdmin(container);
+            adminFrame.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, result);
+        }
     }
 
     private void btnRegistroActionPerformed(ActionEvent evt) {

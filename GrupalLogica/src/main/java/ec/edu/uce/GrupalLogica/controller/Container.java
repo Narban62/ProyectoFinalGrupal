@@ -34,23 +34,23 @@ public class Container {
         this.iAdmin = iAdmin;
     }
 
-    public String authenticateAdmin(String email, String password) {
+    public boolean authenticateAdmin(String email, String password) {
         // Lógica para autenticar con el servidor
         Admin admin = adminService.findByEmail(email);
         if (admin != null && admin.getPassword().equals(password)) {
-            return "Autenticación exitosa.";
+            return true;
         } else {
-            return "Error: Credenciales incorrectas.";
+            return false;
         }
 
     }
-    public String authenticateClient(String email, String password) {
+    public boolean authenticateClient(String email, String password) {
         // Lógica para autenticar con el servidor
         client = clientService.findByEmail(email);
         if (client != null && client.getPassword().equals(password)) {
-            return "Autenticación exitosa.";
+            return true;
         } else {
-            return "Error: Credenciales incorrectas.";
+            return false;
         }
 
     }
